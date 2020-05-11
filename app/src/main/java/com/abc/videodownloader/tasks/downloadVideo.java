@@ -27,6 +27,7 @@ import com.abc.videodownloader.MainActivity;
 import com.abc.videodownloader.R;
 import com.abc.videodownloader.WebViewActivity;
 import com.abc.videodownloader.WelcomeActivity;
+import com.abc.videodownloader.YouTubeActivity;
 import com.abc.videodownloader.model.LinkModel;
 import com.abc.videodownloader.utils.iUtils;
 import com.google.gson.Gson;
@@ -83,7 +84,8 @@ public class downloadVideo {
     public static String msg = "";
     private static String VideoURL;
     private static String VideoTitle;
-    private static String BASE_URL = "https://kzviedodownloader.000webhostapp.com/downloader.php";
+    private static String BASE_URL = "https://kzviedodownloader.000webhostapp.com/fbdownloader.php";
+    private static String TUBE_URL = "https://kzviedodownloader.000webhostapp.com/youtube.php";
     private static OkHttpClient client = new OkHttpClient();
     private static Activity activity;
 
@@ -108,6 +110,9 @@ public class downloadVideo {
 
 //          new GetTikTokVideo().execute(url);
             new Data().execute(getVideoId(url));
+        }else if(url.contains("youtu.be")){
+
+            getYoutube(url);
         } else if (url.contains("facebook.com")){
 
 
@@ -129,6 +134,49 @@ public class downloadVideo {
 
 
     }
+
+    public  static void getYoutube(String url){
+
+        final RequestBody body = new FormBody.Builder()
+                .add("url", url)
+                .build();
+
+        final Request request = new Request.Builder().url(TUBE_URL).post(body).build();
+        Call call = client.newCall(request);
+        call.enqueue(new Callback() {
+
+            @Override
+            public void onFailure(Call call, IOException e) {
+                System.out.println("Registration Error" + e.getMessage());
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                try {
+
+                    String resp = response.body().string();
+                    Log.e("RESPONSE", resp);
+
+
+                    JsonObject jsonObject = new JsonParser().parse(resp).getAsJsonObject();
+                    final String id = jsonObject.get("youtube_id").getAsString();
+                    Log.e("Youtube_id", id);
+
+                    Intent i = new Intent(Mcontext, YouTubeActivity.class);
+                    i.putExtra("id",id);
+                    Mcontext.startActivity(i);
+
+                    pd.dismiss();
+
+                } catch (JsonIOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+
+    }
+
 
     public static String getVideoId(String link) {
         if(!link.contains("https"))
@@ -170,7 +218,7 @@ public class downloadVideo {
 
                         final String HD = jsonObject.get("HDLink").getAsString();
                         String SD = jsonObject.get("SDLink").getAsString();
-                        String title = jsonObject.get("Title").getAsString();
+                        final String title = jsonObject.get("title").getAsString();
 
                         StringTokenizer st = new StringTokenizer(SD,",");
                         SD = st.nextToken();
