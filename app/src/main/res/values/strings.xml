@@ -30,13 +30,13 @@
     <string name="start">GOT IT</string>
 
     <string name="slide_1_title">Hello Food!</string>
-    <string name="slide_1_desc">KZ VideoDownloader is the best download tools for Facebook, Instagram and TikTok.</string>
+    <string name="slide_1_desc">KZ VideoDownloader is the best download tools for Facebook, Youtube, Instagram, Twitter and TikTok.</string>
 
     <string name="slide_2_title">Movie Tickets</string>
     <string name="slide_2_desc"> Press the link icon to paste you copied links and if the user turn on Instant Copy mode, the copied links will auto paste on it.</string>
 
     <string name="slide_3_title">Great Discounts</string>
-    <string name="slide_3_desc">KZ VideoDownloader provide instant copy function. If function is on, the app will auto and ready for download when the user copy video link from Facebook, Instagram or TikTok.</string>
+    <string name="slide_3_desc">KZ VideoDownloader provide instant copy function. If function is on, the app will auto and ready for download when the user copy video link from Facebook, Youtube, Instagram, Twitter or TikTok.</string>
 
     <string name="slide_4_title">World Travel</string>
     <string name="slide_4_desc">KZ VideoDownloader provide smart video qualities chooser when download videos from facebook.</string>

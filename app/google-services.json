@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "91636873580",
+    "firebase_url": "https://kzvideodownloader.firebaseio.com",
+    "project_id": "kzvideodownloader",
+    "storage_bucket": "kzvideodownloader.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91636873580:android:e6a8dbf56c0d81be755b49",
+        "android_client_info": {
+          "package_name": "com.abc.kzvideodownloader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91636873580-n2ghug2oi2phtpcnnubu5qi512suaqm6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.abc.kzvideodownloader",
+            "certificate_hash": "c788e681dda7e9df3503efd4677a64fc7e64b381"
+          }
+        },
+        {
+          "client_id": "91636873580-27hoavokf49snbohrhbopvhsss4pglvv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIbXICQJVzCONSHvYhT5rmiezuS3-39Cs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91636873580-27hoavokf49snbohrhbopvhsss4pglvv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

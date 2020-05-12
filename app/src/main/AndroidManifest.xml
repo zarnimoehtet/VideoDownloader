@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.abc.videodownloader">
+    package="com.abc.kzvideodownloader">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -15,16 +15,16 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".YouTubeActivity"></activity>
-        <activity android:name=".WebViewActivity" />
+        <activity android:name="com.abc.kzvideodownloader.WebViewActivity" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~1458002511" />
 
-        <activity android:name=".GenerateLink" />
-        <activity android:name=".GuideActivity" />
-        <activity android:name=".WelcomeActivity">
+        <activity android:name="com.abc.kzvideodownloader.GenerateLink" />
+        <activity android:name="com.abc.kzvideodownloader.GuideActivity" />
+        <activity android:name=".YouTubeDownLoad"/>
+        <activity android:name="com.abc.kzvideodownloader.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,9 +32,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SettingsActivity"
-            android:parentActivityName=".SettingsActivity" />
-        <activity android:name=".MainActivity">
+            android:name="com.abc.kzvideodownloader.SettingsActivity"
+            android:parentActivityName="com.abc.kzvideodownloader.SettingsActivity" />
+        <activity android:name="com.abc.kzvideodownloader.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -44,19 +44,19 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".reciever.Receiver">
+        <receiver android:name="com.abc.kzvideodownloader.reciever.Receiver">
             <intent-filter>
                 <action android:name="quit_action" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".services.Restarter">
+        <receiver android:name="com.abc.kzvideodownloader.services.Restarter">
             <intent-filter>
                 <action android:name="restartservice" />
             </intent-filter>
         </receiver>
 
         <service
-            android:name=".services.ClipboardMonitor"
+            android:name="com.abc.kzvideodownloader.services.ClipboardMonitor"
             android:exported="false"
             android:label="Clipboard Monitor"
             android:stopWithTask="false" />

@@ -40,15 +40,64 @@
         android:layout_height="wrap_content"/>
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/tube_recycler"
+
+
+    <Button
+        android:id="@+id/p360"
         android:layout_below="@+id/link"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Download 360p"
+        android:background="@drawable/btn"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"/>
 
+    <Button
+        android:id="@+id/p480"
+        android:layout_below="@+id/p360"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Download 480p"
+        android:textSize="18sp"
+        android:background="@drawable/btn"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"/>
 
+    <Button
+        android:id="@+id/p720"
+        android:layout_below="@+id/p480"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Download 720p"
+        android:textSize="18sp"
+        android:background="@drawable/btn"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"/>
 
+    <Button
+        android:id="@+id/p1080"
+        android:layout_below="@+id/p720"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Download 1080p"
+        android:textSize="18sp"
+        android:background="@drawable/btn"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"/>
 
 
     <!--    <com.google.android.ads.nativetemplates.TemplateView-->

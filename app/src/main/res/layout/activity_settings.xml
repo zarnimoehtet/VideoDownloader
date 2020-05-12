@@ -38,7 +38,7 @@
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Version 1.0"/>
+        android:text="Version 1.1"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_one"
@@ -133,6 +133,36 @@
 
             </RelativeLayout>
 
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/location"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:layout_below="@+id/instantcopy"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/loc_img"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    android:src="@drawable/ic_folder_black_24dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/loc_text"-->
+<!--                    android:layout_toRightOf="@+id/loc_img"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Download Location"-->
+<!--                    android:textColor="@color/text"/>-->
+
+
+
+<!--            </RelativeLayout>-->
 
             <RelativeLayout
                 android:id="@+id/opensource"
@@ -162,11 +192,9 @@
                     android:textColor="@color/text"/>
 
 
-
             </RelativeLayout>
 
         </RelativeLayout>
-
 
 
     </androidx.cardview.widget.CardView>
